@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Paaniniya Dental College - Home</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: #f0f8ff;
+      color: #333;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      background: #5a2a83;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      font-size: 28px;
+      letter-spacing: 2px;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      margin-left: 20px;
+      font-weight: 600;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .sidebar {
+      width: 250px;
+      background-color: #63199f;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      padding: 30px 20px;
+      min-height: 100vh;
+    }
+
+    .sidebar a {
+      color: white;
+      padding: 12px 10px;
+      margin: 5px 0;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    .sidebar a:hover {
+      background-color: #8b58b8;
+    }
+
+    main {
+      flex: 1;
+      padding: 40px 30px;
+      background: #ffffff;
+    }
+
+    main h1 {
+      color: #5a2a83;
+      margin-bottom: 25px;
+    }
+
+    .customer-section {
+      background-color: #f9f5ff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(90, 42, 131, 0.1);
+    }
+
+    .customer-section h2 {
+      margin-bottom: 20px;
+      color: #63199f;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #d9c6f0;
+      color: #4a1f68;
+    }
+
+    tr:hover {
+      background-color: #f1e9ff;
+    }
+
+    @media (max-width: 768px) {
+      .content {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        min-height: auto;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Paaniniya Dental College</h1>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="departments.html">Departments</a>
+      <a href="admissions.html">Admissions</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <div class="content">
+    <div class="sidebar">
+      <a href="daily_register.html">Daily Register</a>
+      <a href="stock_summary.html">Stock Summary</a>
+      <a href="add_new_product.html">Add New Product</a>
+      <a href="1.html">Expiry Warnings</a>
+      <a href="2.html">Orders</a>
+      <a href="3.html">Low Stock Alert</a>
+      <a href="4.html">Reports</a>
+      <a href="5.html">Customers</a>
+    </div>
+
+    <main>
+      <h1>Customers</h1>
+      <div class="customer-section">
+        <h2>Customer List</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Contact</th>
+              <th>Last Visit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Dr. Aarti Reddy</td>
+              <td>aarti.reddy@example.com</td>
+              <td>9876543210</td>
+              <td>2025-05-15</td>
+            </tr>
+            <tr>
+              <td>Mr. Suresh Patel</td>
+              <td>suresh.patel@example.com</td>
+              <td>9876543211</td>
+              <td>2025-05-10</td>
+            </tr>
+            <tr>
+              <td>Mrs. Meena Shah</td>
+              <td>meena.shah@example.com</td>
+              <td>9876543212</td>
+              <td>2025-04-28</td>
+            </tr>
+            <!-- Add more customers as needed -->
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

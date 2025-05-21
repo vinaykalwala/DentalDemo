@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Paaniniya Dental College - Orders</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: #f0f8ff;
+      color: #333;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Header */
+    header {
+      background: #5a2a83;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      font-size: 28px;
+      letter-spacing: 2px;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      margin-left: 20px;
+      font-weight: 600;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: row;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 250px;
+      background-color: #63199f;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      padding: 30px 20px;
+      min-height: 100vh;
+    }
+
+    .sidebar h2 {
+      font-size: 20px;
+      margin-bottom: 20px;
+      text-align: center;
+      border-bottom: 2px solid #ffffff33;
+      padding-bottom: 10px;
+    }
+
+    .sidebar a {
+      color: white;
+      padding: 12px 10px;
+      margin: 5px 0;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    .sidebar a:hover {
+      background-color: #8b58b8;
+    }
+
+    /* Main content */
+    main {
+      flex: 1;
+      padding: 40px;
+      background-color: #fff;
+    }
+
+    main h1 {
+      margin-bottom: 30px;
+      color: #5a2a83;
+      text-align: center;
+    }
+
+    .orders-table {
+      width: 100%;
+      border-collapse: collapse;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .orders-table th,
+    .orders-table td {
+      padding: 14px 18px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .orders-table th {
+      background-color: #e8dfff;
+      color: #5a2a83;
+    }
+
+    .orders-table tr:hover {
+      background-color: #f3f3f3;
+    }
+
+    footer {
+      background: #5a2a83;
+      color: white;
+      text-align: center;
+      padding: 15px 20px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .content {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        min-height: auto;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Paaniniya Dental College</h1>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="departments.html">Departments</a>
+      <a href="admissions.html">Admissions</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <div class="content">
+    <div class="sidebar">
+      <a href="daily_register.html">Daily Register</a>
+      <a href="stock_summary.html">Stock Summary</a>
+      <a href="add_new_product.html">Add New Product</a>
+      <a href="1.html">Expiry Warnings</a>
+      <a href="2.html">Orders</a>
+      <a href="3.html">Low Stock Alert</a>
+      <a href="4.html">Reports</a>
+      <a href="5.html">Customers</a>
+    </div>
+
+    <main>
+      <h1 >Orders</h1>
+
+      <!-- Orders Table -->
+      <table class="orders-table">
+        <thead>
+          <tr>
+            <th>Order ID</th>
+            <th>Product Name</th>
+            <th>Quantity</th>
+            <th>Ordered By</th>
+            <th>Order Date</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ORD001</td>
+            <td>Tooth Forceps</td>
+            <td>15</td>
+            <td>Dr. Kumar</td>
+            <td>2025-05-18</td>
+            <td>Shipped</td>
+          </tr>
+          <tr>
+            <td>ORD002</td>
+            <td>Dental Mirrors</td>
+            <td>30</td>
+            <td>Dr. Radhika</td>
+            <td>2025-05-19</td>
+            <td>Pending</td>
+          </tr>
+          <tr>
+            <td>ORD003</td>
+            <td>Ortho Wires</td>
+            <td>10</td>
+            <td>Dr. Mehta</td>
+            <td>2025-05-20</td>
+            <td>Delivered</td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+  </div>
+</body>
+</html>

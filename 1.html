@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Paaniniya Dental College - Home</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: #f0f8ff;
+      color: #333;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Header */
+    header {
+      background: #5a2a83;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      font-size: 28px;
+      letter-spacing: 2px;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      margin-left: 20px;
+      font-weight: 600;
+    }
+
+    /* Layout container */
+    .content {
+      display: flex;
+      flex-direction: row;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 250px;
+      background-color: #63199f;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      padding: 30px 20px;
+      min-height: 100vh;
+    }
+
+    .sidebar h2 {
+      font-size: 20px;
+      margin-bottom: 20px;
+      text-align: center;
+      border-bottom: 2px solid #ffffff33;
+      padding-bottom: 10px;
+    }
+
+    .sidebar a {
+      color: white;
+      padding: 12px 10px;
+      margin: 5px 0;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    .sidebar a:hover {
+      background-color: #8b58b8;
+    }
+
+    /* Main content area */
+    main {
+      flex: 1;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: url('https://images.unsplash.com/photo-1596495578064-c54f29e0b44f?auto=format&fit=crop&w=1400&q=80') no-repeat center/cover;
+      color: white;
+      text-shadow: 1px 1px 8px rgba(0,0,0,0.7);
+    }
+
+    .hero h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px 20px;
+      background: #fff;
+      gap: 30px;
+    }
+
+    .feature-box {
+      background: #e8dfff;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(90, 42, 131, 0.3);
+      padding: 25px;
+      flex: 1 1 300px;
+      max-width: 320px;
+      text-align: center;
+      transition: transform 0.3s ease;
+      cursor: default;
+    }
+
+    .feature-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(90, 42, 131, 0.5);
+    }
+
+    .feature-box h3 {
+      margin-bottom: 15px;
+      color: #5a2a83;
+    }
+
+    footer {
+      background: #5a2a83;
+      color: white;
+      text-align: center;
+      padding: 15px 20px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .content {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        min-height: auto;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 15px;
+      }
+
+      .features {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+   .warning-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 20px;
+}
+
+.warning-card {
+  background: #fff4f4;
+  border: 1px solid #e0b4b4;
+  border-left: 6px solid #d9534f;
+  border-radius: 10px;
+  padding: 20px 25px;
+  width: 300px;
+  box-shadow: 0 4px 12px rgba(217, 83, 79, 0.2);
+  transition: transform 0.2s;
+}
+
+.warning-card:hover {
+  transform: translateY(-5px);
+}
+
+.warning-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.medicine-icon {
+  font-size: 1.8em;
+  margin-right: 10px;
+  color: #d9534f;
+}
+
+  .animated-button {
+    background-color: #F0F0F0; /* Light grey base color for the button */
+    background: linear-gradient(to bottom, #FFFFFF, #E0E0E0); /* Gradient for the glassy effect */
+    border: 1px solid #B0B0B0; /* Border color */
+    border-radius: 25px; /* Rounded corners for the button */
+    padding: 15px 40px; /* Padding inside the button */
+    font-size: 1.2em;
+    color: #333;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    outline: none; /* Remove outline on focus */
+    text-align: center;
+  }
+
+  .animated-button:hover {
+    background: linear-gradient(to bottom, #E0E0E0, #FFFFFF); /* Invert gradient on hover */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3); /* Slightly less shadow on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+  }
+
+  .animated-button:active {
+    background: #D0D0D0; /* Darker on click */
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+    transform: translateY(1px); /* Push down effect on click */
+  }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Paaniniya Dental College</h1>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="departments.html">Departments</a>
+      <a href="admissions.html">Admissions</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <div class="content">
+    <div class="sidebar">
+      <a href="daily_register.html">Daily Register</a>
+      <a href="stock_summary.html">Stock Summary</a>
+      <a href="add_new_product.html">Add New Product</a>
+      <a href="1.html">Expiry Warnings</a>
+      <a href="2.html">Orders</a>
+      <a href="3.html">Low Stock Alert</a>
+      <a href="4.html">Reports</a>
+      <a href="5.html">Customers</a>
+    </div>
+<main>
+  <h1 class="expiry" style="text-align:center; color:#5a2a83; margin-top: 30px;">Expiry Warnings</h1>
+
+  <div class="warning-container">
+    <div class="warning-card">
+      <div class="warning-header">
+        <span class="medicine-icon">💊</span>
+        <h3>Paracetamol 500mg</h3>
+      </div>
+      <p><strong>Quantity:</strong> 20 strips</p>
+      <p><strong>Expiry Date:</strong> June 30, 2025</p>
+    </div>
+
+    <div class="warning-card">
+      <div class="warning-header">
+        <span class="medicine-icon">💊</span>
+        <h3>Amoxicillin 250mg</h3>
+      </div>
+      <p><strong>Quantity:</strong> 10 boxes</p>
+      <p><strong>Expiry Date:</strong> May 12, 2025</p>
+    </div>
+      <div class="warning-card">
+      <div class="warning-header">
+        <span class="medicine-icon">💊</span>
+        <h3>Paracetamol 500mg</h3>
+      </div>
+      <p><strong>Quantity:</strong> 20 strips</p>
+      <p><strong>Expiry Date:</strong> June 30, 2025</p>
+    </div>
+
+    <div class="warning-card">
+      <div class="warning-header">
+        <span class="medicine-icon">💊</span>
+        <h3>Amoxicillin 250mg</h3>
+      </div>
+      <p><strong>Quantity:</strong> 10 boxes</p>
+      <p><strong>Expiry Date:</strong> May 12, 2025</p>
+    </div>
+      <div class="warning-card">
+      <div class="warning-header">
+        <span class="medicine-icon">💊</span>
+        <h3>Paracetamol 500mg</h3>
+      </div>
+      <p><strong>Quantity:</strong> 20 strips</p>
+      <p><strong>Expiry Date:</strong> June 30, 2025</p>
+    </div>
+
+    <div class="warning-card">
+      <div class="warning-header">
+        <span class="medicine-icon">💊</span>
+        <h3>Amoxicillin 250mg</h3>
+      </div>
+      <p><strong>Quantity:</strong> 10 boxes</p>
+      <p><strong>Expiry Date:</strong> May 12, 2025</p>
+    </div>
+      <div class="warning-card">
+      <div class="warning-header">
+        <span class="medicine-icon">💊</span>
+        <h3>Paracetamol 500mg</h3>
+      </div>
+      <p><strong>Quantity:</strong> 20 strips</p>
+      <p><strong>Expiry Date:</strong> June 30, 2025</p>
+    </div>
+
+    <div class="warning-card">
+      <div class="warning-header">
+        <span class="medicine-icon">💊</span>
+        <h3>Amoxicillin 250mg</h3>
+      </div>
+      <p><strong>Quantity:</strong> 10 boxes</p>
+      <p><strong>Expiry Date:</strong> May 12, 2025</p>
+    </div>
+      <div class="warning-card">
+      <div class="warning-header">
+        <span class="medicine-icon">💊</span>
+        <h3>Paracetamol 500mg</h3>
+      </div>
+      <p><strong>Quantity:</strong> 20 strips</p>
+      <p><strong>Expiry Date:</strong> June 30, 2025</p>
+    </div>
+
+  
+  </div>
+</main>
+
+
+  </div>
+</body>
+</html>

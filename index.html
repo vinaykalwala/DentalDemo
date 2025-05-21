@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Paaniniya Dental College - Excellence in Dental Education</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #5a2a83;
+      --secondary: #8e68ae;
+      --accent: #f72585;
+      --light: #f8f9fa;
+      --dark: #212529;
+      --text: #495057;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: var(--light);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    /* Header Styles */
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      padding: 15px 5%;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+
+    header.scrolled {
+      padding: 10px 5%;
+      background: rgba(58, 12, 163, 0.95);
+      backdrop-filter: blur(10px);
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    .logo-text h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 600;
+      background: linear-gradient(to right, white, #e0e0e0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .logo-text span {
+      font-size: 0.8rem;
+      display: block;
+      color: rgba(255,255,255,0.8);
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+      padding: 8px 0;
+      transition: all 0.3s ease;
+    }
+
+    nav a:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--accent);
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover:after {
+      width: 100%;
+    }
+
+    .nav-buttons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-outline {
+      border: 2px solid white;
+      color: white;
+      background: transparent;
+    }
+
+    .btn-outline:hover {
+      background: white;
+      color: var(--primary);
+    }
+
+    .btn-solid {
+      background: var(--accent);
+      color: white;
+      border: 2px solid var(--accent);
+    }
+
+    .btn-solid:hover {
+      background: transparent;
+      color: var(--accent);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                  url('banner.png') no-repeat center center/cover;
+      height: 100vh;
+      min-height: 700px;
+      display: flex;
+      align-items: center;
+      color: white;
+      text-align: center;
+      padding: 0 5%;
+      margin-top: 0;
+    }
+
+    .hero-content {
+      max-width: 900px;
+      margin: 0 auto;
+      animation: fadeInUp 1s ease;
+    }
+
+    .hero h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+      line-height: 1.2;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      opacity: 0.9;
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    /* Main Content */
+    main {
+      padding: 100px 5%;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    section {
+      margin-bottom: 80px;
+      scroll-margin-top: 100px;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: var(--primary);
+      position: relative;
+      display: inline-block;
+      margin-bottom: 15px;
+    }
+
+    .section-header h2:after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(to right, var(--primary), var(--accent));
+      border-radius: 2px;
+    }
+
+    .section-header p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+    }
+
+    /* About Section */
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .about-text p {
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+    }
+
+    .about-image {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+
+    .about-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .about-image:hover img {
+      transform: scale(1.05);
+    }
+
+    .about-image:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top, rgba(0,0,0,0.3), transparent);
+    }
+
+    /* Departments Section */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    }
+
+    .card-img {
+      height: 200px;
+      overflow: hidden;
+    }
+
+    .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .card:hover img {
+      transform: scale(1.1);
+    }
+
+    .card-content {
+      padding: 25px;
+    }
+
+    .card h4 {
+      font-size: 1.4rem;
+      color: var(--primary);
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    .card p {
+      margin-bottom: 20px;
+      color: var(--text);
+    }
+
+    .card-icon {
+      position: absolute;
+      top: -25px;
+      right: 25px;
+      width: 60px;
+      height: 60px;
+      background: var(--accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.5rem;
+      box-shadow: 0 10px 20px rgba(247, 37, 133, 0.3);
+    }
+
+    /* Facilities Section */
+    .facility-highlights {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .facility-item {
+      text-align: center;
+      padding: 30px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+    }
+
+    .facility-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    }
+
+    .facility-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 20px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 2rem;
+    }
+
+    .facility-item h4 {
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+      color: var(--primary);
+    }
+
+    /* Admissions Section */
+    .admission-process {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      border-radius: 10px;
+      padding: 50px;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .admission-process:before {
+      content: '';
+      position: absolute;
+      top: -50px;
+      right: -50px;
+      width: 200px;
+      height: 200px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+    }
+
+    .admission-process:after {
+      content: '';
+      position: absolute;
+      bottom: -80px;
+      left: -80px;
+      width: 300px;
+      height: 300px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 50%;
+    }
+
+    .admission-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .admission-content h3 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 30px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .admission-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .step {
+      text-align: center;
+    }
+
+    .step-number {
+      width: 50px;
+      height: 50px;
+      background: var(--accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 15px;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .step h4 {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .admission-button {
+      text-align: center;
+    }
+
+    /* Student Life Section */
+    .student-life {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .life-highlights {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .life-item {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+    }
+
+    .life-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    }
+
+    .life-item i {
+      font-size: 2rem;
+      color: var(--accent);
+      margin-bottom: 15px;
+      display: block;
+    }
+
+    .life-item h4 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: var(--primary);
+    }
+
+    .gallery-slider {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      height: 400px;
+    }
+
+    .gallery-slider img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Testimonials */
+    .testimonials {
+      background: var(--light);
+      padding: 80px 5%;
+      border-radius: 10px;
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .testimonial {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      position: relative;
+    }
+
+    .testimonial:before {
+      content: '\201C';
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 5rem;
+      color: rgba(58, 12, 163, 0.1);
+      font-family: serif;
+      line-height: 1;
+    }
+
+    .testimonial-content {
+      position: relative;
+      z-index: 1;
+      margin-bottom: 20px;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .author-img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .author-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .author-info h5 {
+      font-size: 1.1rem;
+      color: var(--primary);
+      margin-bottom: 5px;
+    }
+
+    .author-info p {
+      font-size: 0.9rem;
+      color: var(--text);
+      opacity: 0.8;
+    }
+
+    /* Footer */
+    footer {
+      background: linear-gradient(135deg, var(--primary), var(--dark));
+      color: white;
+      padding: 80px 5% 30px;
+    }
+
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .footer-col h4 {
+      font-size: 1.3rem;
+      margin-bottom: 25px;
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    .footer-col h4:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background: var(--accent);
+    }
+
+    .footer-col p {
+      margin-bottom: 20px;
+      opacity: 0.8;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 15px;
+    }
+
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+      opacity: 0.8;
+      transition: all 0.3s ease;
+      display: block;
+    }
+
+    .footer-links a:hover {
+      opacity: 1;
+      transform: translateX(5px);
+      color: var(--accent);
+    }
+
+    .social-links {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .social-links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      color: white;
+      transition: all 0.3s ease;
+    }
+
+    .social-links a:hover {
+      background: var(--accent);
+      transform: translateY(-5px);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 30px;
+      margin-top: 50px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      opacity: 0.7;
+      font-size: 0.9rem;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 1024px) {
+      .about-content, .student-life {
+        grid-template-columns: 1fr;
+      }
+      
+      .student-life {
+        gap: 30px;
+      }
+      
+      .life-highlights {
+        order: 2;
+      }
+      
+      .gallery-slider {
+        order: 1;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-container {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background: var(--primary);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.5s ease;
+        padding: 20px;
+      }
+      
+      .nav-container.active {
+        left: 0;
+      }
+      
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+      }
+      
+      .mobile-menu-btn {
+        display: block;
+      }
+      
+      .hero h2 {
+        font-size: 2.5rem;
+      }
+      
+      .facility-highlights {
+        grid-template-columns: 1fr;
+      }
+      
+      .admission-steps {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h2 {
+        font-size: 2rem;
+      }
+      
+      .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+      }
+      
+      .btn {
+        width: 100%;
+      }
+      
+      .life-highlights {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header id="main-header">
+    <div class="header-container">
+      <div class="logo">
+        <img src="logo.png" alt="logo">
+        <div class="logo-text">
+          <h1>Paaniniya Dental College</h1>
+          <span>Excellence in Dental Education</span>
+        </div>
+      </div>
+      
+      <div class="nav-container" id="nav-container">
+        <nav>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#departments">Departments</a></li>
+            <li><a href="#facilities">Facilities</a></li>
+            <li><a href="#admissions">Admissions</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        
+        <div class="nav-buttons">
+          <a href="login.html" class="btn btn-outline">Login</a>
+        </div>
+      </div>
+      
+      <button class="mobile-menu-btn" id="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h2>Shaping the Future of Dental Professionals</h2>
+      <p>At Paaniniya Dental College, we combine cutting-edge technology with compassionate care to train the next generation of dental experts. Our holistic approach ensures both clinical excellence and patient-centered values.</p>
+      <div class="hero-buttons">
+        <a href="#admissions" class="btn btn-solid">Explore Programs</a>
+        <a href="#contact" class="btn btn-outline">Campus Tour</a>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <!-- About Section -->
+    <section id="about">
+      <div class="section-header">
+        <h2>About Our College</h2>
+        <p>Established with a vision to revolutionize dental education, Paaniniya Dental College has been a pioneer in oral healthcare education for over two decades.</p>
+      </div>
+      
+      <div class="about-content">
+        <div class="about-text">
+          <p>Founded in 1998, Paaniniya Dental College has grown to become one of the premier dental institutions in the region. Our sprawling 25-acre campus houses state-of-the-art facilities that provide an ideal environment for learning and research.</p>
+          <p>We pride ourselves on our distinguished faculty comprising experienced clinicians, researchers, and academicians who are committed to mentoring students to achieve professional excellence.</p>
+          <p>Our curriculum is designed to provide a perfect balance of theoretical knowledge and practical skills, ensuring our graduates are practice-ready professionals.</p>
+          <a href="#" class="btn btn-solid" style="margin-top: 20px;">Learn More About Us</a>
+        </div>
+        
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Paaniniya Dental College Campus">
+        </div>
+      </div>
+    </section>
+
+    <!-- Departments Section -->
+    <section id="departments">
+      <div class="section-header">
+        <h2>Our Departments</h2>
+        <p>Explore our specialized departments offering comprehensive education and clinical training in various dental disciplines.</p>
+      </div>
+      
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-img">
+            <img src="banner.png" alt="Oral Medicine">
+          </div>
+          <div class="card-icon">
+            <i class="fas fa-tooth"></i>
+          </div>
+          <div class="card-content">
+            <h4>Oral Medicine & Radiology</h4>
+            <p>Specializing in diagnosis and non-surgical management of oral diseases, with advanced radiographic imaging techniques.</p>
+            <a href="#" class="btn btn-outline" style="color: var(--primary); border-color: var(--primary);">Learn More</a>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-img">
+            <img src="banner.png" alt="Prosthodontics">
+          </div>
+          <div class="card-icon">
+            <i class="fas fa-teeth-open"></i>
+          </div>
+          <div class="card-content">
+            <h4>Prosthodontics & Crown and Bridge</h4>
+            <p>Advanced training in dental prosthetics, implants, and restoration of oral function and aesthetics.</p>
+            <a href="#" class="btn btn-outline" style="color: var(--primary); border-color: var(--primary);">Learn More</a>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-img">
+            <img src="banner.png" alt="Orthodontics">
+          </div>
+          <div class="card-icon">
+            <i class="fas fa-teeth"></i>
+          </div>
+          <div class="card-content">
+            <h4>Orthodontics & Dentofacial Orthopaedics</h4>
+            <p>Comprehensive training in diagnosis, prevention, and correction of malpositioned teeth and jaws.</p>
+            <a href="#" class="btn btn-outline" style="color: var(--primary); border-color: var(--primary);">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section id="facilities">
+      <div class="section-header">
+        <h2>World-Class Facilities</h2>
+        <p>Our campus is equipped with cutting-edge infrastructure to support exceptional learning and research experiences.</p>
+      </div>
+      
+      <div class="facility-highlights">
+        <div class="facility-item">
+          <div class="facility-icon">
+            <i class="fas fa-flask"></i>
+          </div>
+          <h4>Advanced Dental Laboratories</h4>
+          <p>12 fully-equipped simulation labs with phantom heads and advanced dental equipment for hands-on training.</p>
+        </div>
+        
+        <div class="facility-item">
+          <div class="facility-icon">
+            <i class="fas fa-book"></i>
+          </div>
+          <h4>Central Library</h4>
+          <p>10,000+ titles, 150+ journals, and digital resources with 24/7 access to online dental databases.</p>
+        </div>
+        
+        <div class="facility-item">
+          <div class="facility-icon">
+            <i class="fas fa-laptop-medical"></i>
+          </div>
+          <h4>Digital Classrooms</h4>
+          <p>Smart classrooms with interactive panels, 3D projection systems, and teleconferencing capabilities.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Admissions Section -->
+    <section id="admissions">
+      <div class="section-header">
+        <h2>Admissions</h2>
+        <p>Join our community of future dental professionals. Applications for 2025 intake are now open.</p>
+      </div>
+      
+      <div class="admission-process">
+        <div class="admission-content">
+          <h3>Admission Process</h3>
+          
+          <div class="admission-steps">
+            <div class="step">
+              <div class="step-number">1</div>
+              <h4>Check Eligibility</h4>
+              <p>Verify you meet our academic requirements</p>
+            </div>
+            
+            <div class="step">
+              <div class="step-number">2</div>
+              <h4>Submit Application</h4>
+              <p>Complete our online application form</p>
+            </div>
+            
+            <div class="step">
+              <div class="step-number">3</div>
+              <h4>Entrance Exam</h4>
+              <p>Appear for NEET or our institutional test</p>
+            </div>
+            
+          
+          </div>
+          
+          <div class="admission-button">
+            <a href="#" class="btn btn-solid">Apply Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Student Life Section -->
+    <section id="student-life">
+      <div class="section-header">
+        <h2>Student Life</h2>
+        <p>Beyond academics, we offer a vibrant campus life that nurtures holistic development and lifelong friendships.</p>
+      </div>
+      
+      <div class="student-life">
+        <div class="life-highlights">
+          <div class="life-item">
+            <i class="fas fa-theater-masks"></i>
+            <h4>Cultural Events</h4>
+            <p>Annual fest, talent shows, and cultural celebrations showcasing diverse traditions.</p>
+          </div>
+          
+          <div class="life-item">
+            <i class="fas fa-running"></i>
+            <h4>Sports & Fitness</h4>
+            <p>Well-equipped gym, sports fields, and inter-college tournaments.</p>
+          </div>
+          
+          <div class="life-item">
+            <i class="fas fa-heartbeat"></i>
+            <h4>Community Service</h4>
+            <p>Regular dental camps in rural areas and underserved communities.</p>
+          </div>
+          
+          <div class="life-item">
+            <i class="fas fa-microscope"></i>
+            <h4>Research Opportunities</h4>
+            <p>Student research programs with faculty mentorship and funding.</p>
+          </div>
+        </div>
+        
+        <div class="gallery-slider">
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" alt="Student Life at Paaniniya">
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+      <div class="section-header">
+        <h2>What Our Students Say</h2>
+        <p>Hear from our current students and alumni about their experiences at Paaniniya Dental College.</p>
+      </div>
+      
+      <div class="testimonials">
+        <div class="testimonial-grid">
+          <div class="testimonial">
+            <div class="testimonial-content">
+              <p>"The hands-on clinical exposure from the first year itself gave me the confidence to handle complex cases. The faculty's personalized attention made all the difference in my learning journey."</p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-img">
+                <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Dr. Priya Sharma">
+              </div>
+              <div class="author-info">
+                <h5>Dr. Priya Sharma</h5>
+                <p>MDS Orthodontics, Class of 2022</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial">
+            <div class="testimonial-content">
+              <p>"The state-of-the-art simulation labs and patient interaction opportunities prepared me exceptionally well for my practice. The alumni network has been invaluable in my professional growth."</p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-img">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Dr. Rohan Patel">
+              </div>
+              <div class="author-info">
+                <h5>Dr. Rohan Patel</h5>
+                <p>BDS, Class of 2020</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial">
+            <div class="testimonial-content">
+              <p>"What sets Paaniniya apart is the emphasis on ethical practice and patient communication skills alongside clinical excellence. The research opportunities helped me publish papers during my course."</p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-img">
+                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Dr. Ananya Reddy">
+              </div>
+              <div class="author-info">
+                <h5>Dr. Ananya Reddy</h5>
+                <p>MDS Oral Surgery, Class of 2023</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h4>About Us</h4>
+        <p>Paaniniya Dental College is committed to excellence in dental education, research, and patient care since 1998.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+  <footer>
+    <p>&copy; 2025 Paaniniya Dental College. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
