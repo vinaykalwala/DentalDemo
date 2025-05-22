@@ -91,7 +91,6 @@
     /* Main content area */
     main {
       flex: 1;
-      padding: 20px;
     }
 
     .hero {
@@ -179,45 +178,98 @@
         align-items: center;
       }
     }
-       main h1 {
-      margin-bottom: 30px;
-      color: #5a2a83;
-      font-size: 28px;
+  
+     .form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #5a2a83;
+}
+
+.product-form-container input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.product-form-container {
+  background-color: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+  border-radius: 10px;
+}
+.submit-button-container {
       text-align: center;
-    }
-   
-
-    table {
-      border-collapse: collapse;
-      width: 90%;
-      max-width: 1000px;
-      background-color: whitesmoke;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-      margin: 0 auto 40px auto;
+      margin-top: 20px;
     }
 
-    th, td {
-      border: 1px solid #000;
-      padding: 12px 15px;
-      text-align: left;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      color: #333;
-    }
-
-    th {
+    .submit-button-container button {
       background-color: #5a2a83;
       color: white;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
     }
 
-    /* Thicker border after Batch No column */
-    th:nth-child(3), td:nth-child(3) {
-      border-right: 3px solid #000;
+    .submit-button-container button:hover {
+      background-color: #7c4ac2;
     }
+    .form-group {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  width: 100%;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.form-group select {
+  padding: 0.6rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+.form-group select:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+input[type="date"] {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  color: #333;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="date"]:focus {
+  border-color: #5a2a83;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(90, 42, 131, 0.2);
+}
+
   </style>
 </head>
 <body>
@@ -247,82 +299,67 @@
     </div>
 
     <main>
-      <h1 class="stock">Stock Summary</h1>
+  <div style="display: flex; justify-content: center; padding: 40px 20px;">
+    <div class="product-form-container">
+      <h1 class="new" style="text-align:center; color:#5a2a83;">Create Order</h1>
+      <form action="products.html" method="get">
+        <div class="form-group">
+          <label for="productID">Order ID:</label>
+          <input type="text" id="productID" name="productID" placeholder="Enter Product ID" required>
+        </div>
+        <div class="form-group">
+          <label for="productName">Product Name:</label>
+          <input type="text" id="productName" name="productName" placeholder="Enter Product Name" required>
+        </div>
+        <div class="form-group">
+  <label for="categoryID">Department:</label>
+  <select id="categoryID" name="categoryID">
+    <option value="">-- Select Department --</option>
+    <option value="oral_medicine">Oral Medicine and Radiology</option>
+    <option value="prosthodontics">Prosthodontics</option>
+    <option value="periodontics">Periodontics</option>
+    <option value="orthodontics">Orthodontics</option>
+    <option value="conservative_dentistry">Conservative Dentistry and Endodontics</option>
+    <option value="pedodontics">Pedodontics and Preventive Dentistry</option>
+    <option value="oral_surgery">Oral and Maxillofacial Surgery</option>
+    <option value="public_health">Public Health Dentistry</option>
+    <option value="oral_pathology">Oral Pathology and Microbiology</option>
+  </select>
+</div>
+ <div class="form-group">
+  <label for="categoryID">Order Type:</label>
+  <select id="categoryID" name="categoryID">
+    <option value="">-- Select Department --</option>
+    <option value="oral_medicine">Import</option>
+    <option value="prosthodontics">Export</option>
+   
+  </select>
+</div>
 
-      <table>
-        <thead>
-          <tr>
-            <th>DATE</th>
-            <th>PRODUCT NAME</th>
-            <th>BATCH NO</th>
-            <th>AVAILABILITY</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>2024-05-01</td>
-            <td>Laptop Model A</td>
-            <td>LTA-001</td>
-            <td>120</td>
-          </tr>
-          <tr>
-            <td>2024-05-01</td>
-            <td>Smartphone X</td>
-            <td>SPX-005</td>
-            <td>85</td>
-          </tr>
-          <tr>
-            <td>2024-05-02</td>
-            <td>Tablet Pro</td>
-            <td>TPR-010</td>
-            <td>50</td>
-          </tr>
-          <tr>
-            <td>2024-05-02</td>
-            <td>Monitor Ultra</td>
-            <td>MUR-003</td>
-            <td>30</td>
-          </tr>
-          <tr>
-            <td>2024-05-03</td>
-            <td>Keyboard Mech</td>
-            <td>KBM-007</td>
-            <td>200</td>
-          </tr>
-          <tr>
-            <td>2024-05-03</td>
-            <td>Mouse Gaming</td>
-            <td>MGM-012</td>
-            <td>110</td>
-          </tr>
-          <tr>
-            <td>2024-05-04</td>
-            <td>Headphones ANC</td>
-            <td>HPA-009</td>
-            <td>65</td>
-          </tr>
-          <tr>
-            <td>2024-05-04</td>
-            <td>Webcam HD</td>
-            <td>WHD-002</td>
-            <td>90</td>
-          </tr>
-          <tr>
-            <td>2024-05-05</td>
-            <td>External SSD</td>
-            <td>ESS-004</td>
-            <td>40</td>
-          </tr>
-          <tr>
-            <td>2024-05-05</td>
-            <td>Router WiFi 6</td>
-            <td>RWF-008</td>
-            <td>25</td>
-          </tr>
-        </tbody>
-      </table>
 
-    </main>
+        <div class="form-group">
+          <label for="unit">Quantity:</label>
+          <input type="text" id="unit" name="unit" placeholder="e.g., Pcs, Kg, Liters">
+        </div>
+        <div class="form-group">
+  <label for="orderedBy">Ordered By:</label>
+  <input type="text" id="orderedBy" name="orderedBy" placeholder="Enter name of person who ordered">
+</div>
+
+<div class="form-group">
+  <label for="orderedDate">Ordered Date:</label>
+  <input type="date" id="orderedDate" name="orderedDate" placeholder="Enter order date">
+</div>
+
+        <div class="submit-button-container">
+             <button type="submit">Add more Products</button>
+          <button type="submit">Create Order</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</main>
+
   </div>
 </body>
 </html>
